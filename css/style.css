@@ -8,7 +8,10 @@
     # GLOBAL MEDIA
 
 
-
+# LAYOUT
+    # MEDIA QUERIES / BREAKPOINT
+    # CONTAINER
+    # GRID
 
 
 
@@ -106,4 +109,70 @@ img {
     /* MAKE ALL IMAGES SHRINK ON SMALL SCREENS */
     max-width: 100%;
     height: auto;
+}
+
+/* LAYOUT */
+
+/* RESPONSIVE TYPOGRAPHY VIA MEDIA QUERIES */
+
+/* SMALL SCREENS (Mobile < 768px) */
+
+body {
+    font-size: 87.5%;
+}
+
+/* MEDIUM SCREENS (Tablets < 1200px) */
+
+@media (min-width: 768px) {
+    body {
+    font-size: 100%;
+    }
+}
+
+/* LARGE SCREENS (Laptops & Desktops > 1200px) */
+
+@media (min-width: 1200px) {
+    body {
+    font-size: 112.5%;
+    }
+}
+
+/* CONTAINER */
+
+.container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* GRID */
+
+@media (min-width: 768px) {
+.row {
+
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+.one-half {
+    grid-column: span 6 / span 6;
+}
+.one-third {
+    grid-column: span 4 / span 4;
+}
+.two-thirds {
+    grid-column: span 8 / span 8;
+}
+.one-fourth {
+    grid-column: span 3 / span 3;
+}
+.three-fourths {
+    grid-column: span 9 / span 9;
+}
+}
+
+.demo  > * {
+    background-color: #e39797;
+    padding: 1em;
+    text-align: center;
 }
